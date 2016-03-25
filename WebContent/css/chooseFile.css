@@ -1,0 +1,41 @@
+
+        .btn-file {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-file input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            min-width: 100%;
+            min-height: 100%;
+            font-size: 100px;
+            text-align: right;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            background: red;
+            cursor: inherit;
+            display: block;
+        }
+        input[readonly] {
+            background-color: white !important;
+            cursor: text !important;
+        }
+        .bg-1 {
+            background-color:#474e5d; /* Green   #1abc9c;*/
+            color: #ffffff;
+            width:50%;
+
+        }
+        .container{
+
+            -webkit-border-radius: 10px; /** newer webkit browsers **/
+            -khtml-border-radius: 10px; /** older webkit browsers **/
+            -moz-border-radius: 10px; /** older gecko browsers **/
+            -o-border-radius: 10px; /** older opera browsers **/
+            border-radius: 10px; /** all modern browsers, including IE9+, but see below **/
+            top:50%;
+            bottom:50%;
+            /* box-shadow: 10px 10px 5px #888888;
+ */
+        }

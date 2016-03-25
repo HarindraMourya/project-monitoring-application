@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<constant name="struts.devMode" value="true" />
+<constant name="struts.custom.i18n.resources" value="global" />
+<constant name="struts.multipart.maxSize" value="100000" />
+
+<package name="default" namespace="/" extends="struts-default" >
+
+<interceptors>
+ 
+            <interceptor name="clear-cache"
+                class="edu.pma.actions.ClearCacheInterceptor" />
+                
+        </interceptors>
+        
+     
+
+<action name="langAc" class="edu.pma.languages.LangAction" method="execute">
+ 
+        	<interceptor-ref name="i18n"/>
+        	<interceptor-ref name="basicStack"/>
+        	<result name="success">/home.jsp</result>
+</action>
+<action name="Login" class="edu.pma.actions.LoginAction" method="execute">
+ 
+<result name="student">/studentDashboard.jsp</result>
+<result name="faculty">/facultyDashboard.jsp</result>
+<result name="hod">/hodDashboard.jsp</result>
+<result name="error">/index.jsp</result>
+</action>
+
+<action name="AdminLogin" class="edu.pma.actions.AdminLoginAction" method="execute">
+ 
+<result name="success">/adminDashboard.jsp</result>
+<result name="error">/index.jsp</result>
+</action>
+
+<action name="StudentRegistration" class="edu.pma.actions.StudentRegistrationAction" method="execute">
+<result name="success">/home.jsp</result>
+<result name="error">/index.jsp</result>
+</action>
+
+<action name="facultyRegistartion" class="edu.pma.actions.FacultyRegistartionAction" method="execute">
+<result name="success">/adminDashboard.jsp</result>
+<result name="error">/adminDashboard.jsp</result>
+</action>
+
+
+<action name="multiplefacultyRegistartion" class="edu.pma.actions.MultiplefacultyRegistartionAction" >
+      <interceptor-ref name="fileUpload"/>
+      <interceptor-ref name="basicStack"/>
+       
+<result name="success">/table.jsp</result>
+<result name="error">/adminDashboard.jsp</result>
+</action>
+
+<action name="facultyDetails" class="edu.pma.actions.FacultyDetails" >
+ 
+<result name="success">/facultyDetails.jsp</result>
+<result name="error">/adminDashboard.jsp</result>
+</action>
+<action name="studentDetails" class="edu.pma.actions.StudentDetails" >
+<result name="success">/studentDetails.jsp</result>
+<result name="error">/adminDashboard.jsp</result>
+</action>
+
+<action name="emailer" class="edu.pma.actions.EmailerAction" >
+<result name="success">/success.jsp</result>
+<result name="error">/error.jsp</result>
+</action>
+
+<action name="logout" class="edu.pma.actions.AdminLoginAction" method="logout">
+ 
+<result name="success">/index.jsp</result>
+<result name="error">/adminDashboard.jsp</result>
+</action>
+
+<action name="loginfail" class="edu.pma.actions.LoginFailAction" method="logout">
+ <result name="success">/home.jsp</result>
+</action>
+
+<action name="mailbox" class="edu.pma.actions.MailboxAction" >
+ <result name="success">/adminDashboard.jsp</result>
+</action>
+<action name="addProject" class="edu.pma.actions.AddProjectAction" >
+ <result name="success">/studentDashboard.jsp</result>
+</action>
+
+</package>
+<!-- <include file="student/student.xml"></include>
+ -->
+<include file="json/json.xml"></include>
+
+
+<!-- <include file="admin.xml"></include> -->
+
+  
+</struts>

@@ -1,0 +1,78 @@
+.modal{
+            overflow-y: auto;
+
+        }
+
+  
+        footer {
+            border-color: #333;
+            text-shadow: none;
+            font-size: 13px;
+            color: #fff;
+            background: #333;
+            box-shadow: none;
+
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+
+        }
+        #login2{
+            margin-top: 10%;
+        }
+        #login3{
+            margin-top: 10%;
+        }
+        #register{
+            margin-top: 8%;
+        }
+        #cpr{
+            text-align: center;
+            font-weight: bold;
+        }
+        .bg-1 {
+            background-color:#474e5d; /* Green   #1abc9c;*/
+            color: #ffffff;
+            width:90%;
+
+        }
+        .bg-2 {
+            background-color:#474e5d; /* Green   #1abc9c;*/
+            color: #ffffff;
+            width:50%;
+
+        }
+        .container{
+
+            -webkit-border-radius: 10px; /** newer webkit browsers **/
+            -khtml-border-radius: 10px; /** older webkit browsers **/
+            -moz-border-radius: 10px; /** older gecko browsers **/
+            -o-border-radius: 10px; /** older opera browsers **/
+            border-radius: 10px; /** all modern browsers, including IE9+, but see below **/
+            top:50%;
+            bottom:50%;
+             max-width:90%;
+            /* box-shadow: 10px 10px 5px #888888;
+ */
+        }
+        #dash{
+            margin-left: 1%;
+            margin-top: 5%;
+        }
+        footer {
+        border-color: #333;
+        text-shadow: none;
+        font-size: 13px;
+        color: #fff;
+        background: #333;
+        box-shadow: none;
+
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+
+    }
+        
+ 
